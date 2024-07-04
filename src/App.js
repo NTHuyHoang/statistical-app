@@ -42,7 +42,7 @@ function App() {
                 <Route path="/form" element={<Form />} />
                 {/* <Route path="/bar" element={<Bar />} /> */}
                 {/* <Route path="/pie" element={<Pie />} /> */}
-                <Route path="/" element={<Environmental_Data_Line />} />
+                <Route path="/Environmental_Data" element={<Environmental_Data_Line />} />
                 <Route path="/Soil-data" element={<Soil_Data_Line />} />
                 {/* <Route path="/faq" element={<FAQ />} /> */}
                 <Route path="/calendar" element={<Calendar />} />

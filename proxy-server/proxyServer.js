@@ -7,6 +7,6 @@ app.get('/api/getdata', (req, res) => {
     req.pipe(request(url)).pipe(res);
 });
 
-app.listen(3000, () => {
-    console.log('Proxy server listening on port 3000');
+app.listen(4000, () => {
+    console.log('Proxy server listening on port 4000');
 });

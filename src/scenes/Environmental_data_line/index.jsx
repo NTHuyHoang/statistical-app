@@ -14,7 +14,7 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/getdata');
+                const response = await axios.get('http://localhost:4000/api/getdata');
                 let env_humi = []
                 let env_temp = []
                 let env_lux = []

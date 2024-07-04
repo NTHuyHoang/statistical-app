@@ -208,7 +208,7 @@ const Sidebar = () => {
                         {/*/>*/}
                         <Item
                             title="Environmental-Data"
-                            to="/"
+                            to="/Environmental_Data"
                             icon={<NatureIcon/>}
                             selected={selected}
                             setSelected={setSelected}

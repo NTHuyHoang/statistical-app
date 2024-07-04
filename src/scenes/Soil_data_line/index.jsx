@@ -17,14 +17,6 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
                 let soil_temp = []
                 let soil_humi = []
                 let soil_pH = []
-                // let soil_nito = [];
-                // let soil_phosp = [];
-                // let soil_kali = [];
-                // let soil_npk = [
-                //     { id: 'Nito', data: [] },
-                //     { id: 'Phosp', data: [] },
-                //     { id: 'Kali', data: [] },
-                // ];
 
                 response.data.data.forEach((e) => {
                     soil_temp.push({
@@ -35,22 +27,6 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
                         x: e.Time_real_Date,
                         y: e.Soil_humi,
                     })
-                    // soil_pH.push({
-                    //     x: e.Time_real_Date,
-                    //     y: e.Soil_pH,
-                    // })
-                    // soil_npk[0].data.push({
-                    //     x: e.Time_real_Date,
-                    //     y: e.Soil_Nito,
-                    // });
-                    // soil_npk[1].data.push({
-                    //     x: e.Time_real_Date,
-                    //     y: e.Soil_Phosp,
-                    // });
-                    // soil_npk[2].data.push({
-                    //     x: e.Time_real_Date,
-                    //     y: e.Soil_Kali,
-                    // });
                 })
                 setData1(soil_temp);
                 setData2(soil_humi);
