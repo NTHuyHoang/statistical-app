@@ -3,7 +3,7 @@ import './register.css'
 const Register = () => {
     return (
         <div class="wrapper">
-            <form id="registerForm" action="http://localhost:3000/Environmental_Data">
+            <form action="#">
                 <h2>Register</h2>
                 <div className="input-field">
                     <input type="text" placeholder='Username' required/>
