@@ -119,13 +119,13 @@ const Sidebar = () => {
                     )}
 
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-                        <Item
-                            title="Trang chủ"
-                            to="/"
-                            icon={<HomeOutlinedIcon/>}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
+                        {/*<Item*/}
+                        {/*    title="Trang chủ"*/}
+                        {/*    to="/"*/}
+                        {/*    icon={<HomeOutlinedIcon/>}*/}
+                        {/*    selected={selected}*/}
+                        {/*    setSelected={setSelected}*/}
+                        {/*/>*/}
 
                         <Typography
                             variant="h6"
@@ -163,13 +163,13 @@ const Sidebar = () => {
                         >
                             Pages
                         </Typography>
-                        <Item
-                            title="Profile Form"
-                            to="/form"
-                            icon={<PersonOutlinedIcon/>}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
+                        {/*<Item*/}
+                        {/*    title="Profile Form"*/}
+                        {/*    to="/form"*/}
+                        {/*    icon={<PersonOutlinedIcon/>}*/}
+                        {/*    selected={selected}*/}
+                        {/*    setSelected={setSelected}*/}
+                        {/*/>*/}
                         <Item
                             title="Calendar"
                             to="/calendar"
