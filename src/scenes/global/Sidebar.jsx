@@ -109,9 +109,9 @@ const Sidebar = () => {
                                     fontWeight="bold"
                                     sx={{m: "10px 0 0 0"}}
                                 >
-                                    Data Dashboard
+                                    Statistical Data
                                 </Typography>
-                                <Typography variant="h5" color={colors.greenAccent[500]}>
+                                <Typography variant="h5" color={colors.redAccent[200]}>
                                     Edited by Nhật Thăng
                                 </Typography>
                             </Box>
@@ -208,7 +208,7 @@ const Sidebar = () => {
                         {/*/>*/}
                         <Item
                             title="Environmental-Data"
-                            to="/Environmental-Data"
+                            to="/"
                             icon={<NatureIcon/>}
                             selected={selected}
                             setSelected={setSelected}
