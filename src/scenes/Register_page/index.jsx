@@ -1,9 +1,10 @@
 import React from 'react'
 import './register.css'
+import './register.js'
 const Register = () => {
     return (
         <div class="wrapper">
-            <form action="#">
+            <form id="registerForm" action="https://statistical-data.vercel.app">
                 <h2>Register</h2>
                 <div className="input-field">
                     <input type="text" placeholder='Username' required/>
