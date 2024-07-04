@@ -24,7 +24,7 @@ function App() {
   const [theme, colorMode] = useMode();
   const location = useLocation();
 
-  const isSpecialPage = location.pathname === '/register' || location.pathname === '/login';
+  const isSpecialPage = location.pathname === '/register' || location.pathname === '/';
 
   return (
       <ColorModeContext.Provider value={colorMode}>
@@ -35,7 +35,7 @@ function App() {
             <main className="content">
               {!isSpecialPage && <Topbar setIsSidebar={setIsSidebar} />}
               <Routes>
-                 {/*<Route path="/" element={<Dashboard />} /> */}
+                <Route path="/" element={<Login />} />
                 {/* <Route path="/team" element={<Team />} /> */}
                 {/* <Route path="/contacts" element={<Contacts />} /> */}
                 {/* <Route path="/invoices" element={<Invoices />} /> */}
@@ -47,7 +47,6 @@ function App() {
                 {/* <Route path="/faq" element={<FAQ />} /> */}
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
                 {/* <Route path="/geography" element={<Geography />} /> */}
               </Routes>
             </main>

@@ -1,10 +1,11 @@
 import React from 'react'
 import './login.css'
+import './login.js'
 import { FaGoogle,FaFacebook,FaGithub   } from "react-icons/fa";
 const Login = () => {
     return (
         <div class="wrapper">
-            <form action="#">
+            <form id="loginForm" action="http://localhost:3000/Environmental_Data">
                 <h2>Login</h2>
                 <div className="input-field">
                     <input type="text" placeholder='Username' required/>
@@ -33,7 +34,9 @@ const Login = () => {
 
                 </div>
             </form>
+
         </div>
     )
+
 }
 export default Login
