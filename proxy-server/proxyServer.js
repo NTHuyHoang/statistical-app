@@ -6,6 +6,10 @@ app.get('/api/getdata', (req, res) => {
     const url = 'http://sanslab.ddns.net:5001/api/getdata?device_name=device_2';
     req.pipe(request(url)).pipe(res);
 });
+app.get('/api/otherdata', (req, res) => {
+    const url = 'http://sanslab.ddns.net:5001/api/getdata?device_name=device_3';
+    req.pipe(request(url)).pipe(res);
+});
 
 app.listen(4000, () => {
     console.log('Proxy server listening on port 4000');
