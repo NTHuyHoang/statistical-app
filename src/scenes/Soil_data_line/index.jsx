@@ -13,7 +13,7 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://sanslab.ddns.net:5001/api/getdata?device_name=device_3');
+                const response = await axios.get('http://localhost:4000/api/otherdata');
                 let soil_temp = []
                 let soil_humi = []
                 let soil_pH = []

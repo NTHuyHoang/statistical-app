@@ -14,7 +14,7 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://sanslab.ddns.net:5001/api/getdata?device_name=device_2');
+                const response = await axios.get('http://localhost:4000/api/getdata');
                 let env_humi = []
                 let env_temp = []
                 let env_lux = []
