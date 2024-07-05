@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
 import './login.js'
 import { FaGoogle,FaFacebook,FaGithub   } from "react-icons/fa";
+import {GoogleLogin} from '@react-oauth/google';
+import {jwtDecode} from "jwt-decode";
 const Login = () => {
     return (
         <div class="wrapper">
-            <form id="loginForm" action="https://statistical-data.vercel.app/Environmental_Data">
+            <form>
                 <h2>Login</h2>
                 <div className="input-field">
                     <input type="text" placeholder='Username' required/>
@@ -27,11 +29,24 @@ const Login = () => {
                 <div className="register">
                     Log in via
                     <p class="login-via">
-                        <a  href="#"><FaGoogle /></a>
-                        <a style={{marginLeft: 20 + 'px'}}  href="#"><FaFacebook /></a>
-                        <a style={{marginLeft: 20 + 'px'}}  href="#"><FaGithub  /></a>
+                        <GoogleLogin
+                            render={renderProps => (
+                                <button onClick={renderProps.onClick} disabled={renderProps.disabled} style={{ border: 'none', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center'  }}>
+                                    <FaGoogle color="#db4a39" />
+                                </button>
+                            )}
+                            onSuccess={credentialResponse => {
+                                const decoded = jwtDecode(credentialResponse?.credential);
+                                alert('Login success!'); // Hiển thị thông báo đăng nhập thành công
+                                setTimeout(() => {
+                                    window.location.href = "https://statistical-data.vercel.app/Environmental_Data"; // Điều hướng tới trang khác
+                                }, 100);
+                            }}
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}
+                        />
                     </p>
-
                 </div>
             </form>
 

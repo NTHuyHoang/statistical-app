@@ -121,6 +121,10 @@ button:hover {
     color: #fff;
 }
 .login-via{
+    display: flex;
     font-size: 25px;
     padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
