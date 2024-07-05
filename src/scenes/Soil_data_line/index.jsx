@@ -13,7 +13,7 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/otherdata');
+                const response = await axios.get('http://sanslab.ddns.net:5001/api/getdata?device_name=device_3');
                 let soil_temp = []
                 let soil_humi = []
                 let soil_pH = []
@@ -42,7 +42,6 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
 
     return (
         <Box m="20px">
-            {/*<Header title="Line Charts" subtitle="Data Line Charts"/>*/}
             <Box height="75vh">
                 <Grid container spacing={3} sx={{height: '100%'}}>
                     <Grid item xs={12} md={12} sx={{height: '50%'}}>
@@ -57,18 +56,6 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
                         </Typography>
                         <LineChart data={data2}/>
                     </Grid>
-                    {/*<Grid item xs={12} md={6} sx={{height: '50%', marginTop: '100px'}}>*/}
-                    {/*    <Typography variant="h3" align="center" gutterBottom>*/}
-                    {/*        <Header subtitle="Soil pH"/>*/}
-                    {/*    </Typography>*/}
-                    {/*    <LineChart data={data3}/>*/}
-                    {/*</Grid>*/}
-                    {/*<Grid item xs={12} md={6} sx={{height: '50%', marginTop: '100px'}}>*/}
-                    {/*    <Typography variant="h3" align="center" gutterBottom>*/}
-                    {/*        <Header subtitle="Soil NPK"/>*/}
-                    {/*    </Typography>*/}
-                    {/*    <LineChart data={data4}/>*/}
-                    {/*</Grid>*/}
                 </Grid>
             </Box>
         </Box>
