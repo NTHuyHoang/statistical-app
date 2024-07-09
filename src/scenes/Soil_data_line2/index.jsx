@@ -15,8 +15,6 @@ import MultipleLineChart from "../../components/MultipleLineChart";
 import LandscapeIcon from '@mui/icons-material/Landscape';
 
 
-
-
 const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -26,7 +24,7 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/soildata1');
+                const response = await axios.get('http://localhost:4000/api/soildata2');
                 const soil_temp = response.data.data.map(e => ({
                     x: e.Time_real_Date,
                     y: e.Soil_temp,

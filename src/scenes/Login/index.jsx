@@ -39,8 +39,8 @@ const Login = () => {
                                 const decoded = jwtDecode(credentialResponse?.credential);
                                 alert('Login success!'); // Hiển thị thông báo đăng nhập thành công
                                 setTimeout(() => {
-                                    window.location.href = "https://statistical-data.vercel.app/Environmental_Data"; // Điều hướng tới trang khác
-                                }, 100);
+                                    window.location.href = "https://statistical-data.vercel.app/env-data-table"; // Điều hướng tới trang khác
+                                }, 1000);
                             }}
                             onError={() => {
                                 console.log('Login Failed');

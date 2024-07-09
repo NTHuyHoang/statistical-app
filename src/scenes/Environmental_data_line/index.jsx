@@ -14,7 +14,7 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/getdata');
+                const response = await axios.get('http://localhost:4000/api/enviromentdata');
                 let env_humi = []
                 let env_temp = []
                 let env_lux = []
@@ -63,11 +63,15 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
                         </Typography>
                         <LineChart data={Env_temp_data} />
                     </Grid>
-                    <Grid item xs={12} md={12} sx={{ height: '50%', marginTop: '80px' }}>
+                    <Grid item xs={12} md={1} sx={{ height: '50%', marginTop: '80px' }}>
+                    </Grid>
+                    <Grid item xs={12} md={10} sx={{ height: '50%', marginTop: '80px' }}>
                         <Typography variant="h3" align="center" gutterBottom>
                             <Header subtitle="Environmental Lux"/>
                         </Typography>
                         <LineChart data={Env_Lux_data} />
+                    </Grid>
+                    <Grid item xs={12} md={1} sx={{ height: '50%', marginTop: '80px' }}>
                     </Grid>
                 </Grid>
             </Box>

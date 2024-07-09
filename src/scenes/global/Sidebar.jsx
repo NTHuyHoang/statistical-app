@@ -141,13 +141,7 @@ const Sidebar = () => {
                         {/*  selected={selected}*/}
                         {/*  setSelected={setSelected}*/}
                         {/*/>*/}
-                        {/*<Item*/}
-                        {/*  title="Contacts Information"*/}
-                        {/*  to="/contacts"*/}
-                        {/*  icon={<ContactsOutlinedIcon />}*/}
-                        {/*  selected={selected}*/}
-                        {/*  setSelected={setSelected}*/}
-                        {/*/>*/}
+
                         {/*<Item*/}
                         {/*  title="Invoices Balances"*/}
                         {/*  to="/invoices"*/}
@@ -161,7 +155,7 @@ const Sidebar = () => {
                             color={colors.grey[300]}
                             sx={{m: "15px 0 5px 20px"}}
                         >
-                            Pages
+                            Data Table
                         </Typography>
                         {/*<Item*/}
                         {/*    title="Profile Form"*/}
@@ -170,6 +164,27 @@ const Sidebar = () => {
                         {/*    selected={selected}*/}
                         {/*    setSelected={setSelected}*/}
                         {/*/>*/}
+                        <Item
+                            title="Env-Data-Table"
+                            to="/env-data-table"
+                            icon={<NatureIcon/>}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                        <Item
+                            title="Device1-Data-Table"
+                            to="/device1-data-table"
+                            icon={<LandscapeIcon/>}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                        <Item
+                            title="Device2-Data-Table"
+                            to="/device2-data-table"
+                            icon={<LandscapeIcon/>}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
                         <Item
                             title="Calendar"
                             to="/calendar"
@@ -184,7 +199,6 @@ const Sidebar = () => {
                         {/*  selected={selected}*/}
                         {/*  setSelected={setSelected}*/}
                         {/*/>*/}
-
                         <Typography
                             variant="h6"
                             color={colors.grey[300]}
@@ -208,28 +222,21 @@ const Sidebar = () => {
                         {/*/>*/}
                         <Item
                             title="Environmental-Data"
-                            to="/Environmental_Data"
+                            to="/environmental-data"
                             icon={<NatureIcon/>}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
                             title="Soil-data-1"
-                            to="/Soil-data"
+                            to="/soil-data-1"
                             icon={<LandscapeIcon/>}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
                             title="Soil-data-2"
-                            to="/Soil-data"
-                            icon={<LandscapeIcon/>}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Soil-data-3"
-                            to="/Soil-data"
+                            to="/soil-data-2"
                             icon={<LandscapeIcon/>}
                             selected={selected}
                             setSelected={setSelected}
