@@ -141,7 +141,7 @@ const Device1_Data_Table = () => {
     return (
         <Box m="20px">
             <Header
-                title="Environmental-Data-Table"
+                title="Device1 Data Table"
                 subtitle="Values of data fields"
             />
             <Box
