@@ -40,7 +40,7 @@ const Soil_Data_Line = ({isCustomLineColors = false, isDashboard = false, data})
 
         const fetchForecastData = async () => {
             try {
-                const response = await axios.get('http://sanslab.ddns.net:5001/api/getdataforecast');
+                const response = await axios.get('http://localhost:4000/api/dataforecast');
                 const result = response.data.data;
 
                 if (Array.isArray(result)) {
