@@ -22,8 +22,8 @@ const Device2_Data_Table = () => {
 
                 // Kiểm tra nếu result là một mảng
                 if (Array.isArray(result)) {
-                    const formattedData = result.map((item,i) => ({
-                        id: i+1, // Sử dụng _id làm id
+                    const formattedData = result.map((item, i) => ({
+                        id: i + 1, // Sử dụng _id làm id
                         Soil_temp: item.Soil_temp,
                         Soil_humi: item.Soil_humi,
                         Soil_pH: item.Soil_pH,
@@ -179,7 +179,7 @@ const Device2_Data_Table = () => {
                 <DataGrid
                     rows={data}
                     columns={columns}
-                    components={{ Toolbar: GridToolbar }}
+                    components={{Toolbar: GridToolbar}}
                 />
             </Box>
         </Box>

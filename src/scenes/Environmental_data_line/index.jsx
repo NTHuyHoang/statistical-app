@@ -63,15 +63,15 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
                         </Typography>
                         <LineChart data={Env_temp_data} />
                     </Grid>
-                    <Grid item xs={12} md={1} sx={{ height: '50%', marginTop: '80px' }}>
+                    <Grid item xs={12} md={1} sx={{ height: '55%', marginTop: '40px' }}>
                     </Grid>
-                    <Grid item xs={12} md={10} sx={{ height: '50%', marginTop: '80px' }}>
+                    <Grid item xs={12} md={10} sx={{ height: '55%', marginTop: '40px' }}>
                         <Typography variant="h3" align="center" gutterBottom>
                             <Header subtitle="Environmental Lux"/>
                         </Typography>
                         <LineChart data={Env_Lux_data} />
                     </Grid>
-                    <Grid item xs={12} md={1} sx={{ height: '50%', marginTop: '80px' }}>
+                    <Grid item xs={12} md={1} sx={{ height: '55%', marginTop: '40px' }}>
                     </Grid>
                 </Grid>
             </Box>
