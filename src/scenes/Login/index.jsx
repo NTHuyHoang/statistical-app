@@ -8,13 +8,13 @@ const Login = () => {
     const handleSuccess = (credentialResponse) => {
         const decoded = jwtDecode(credentialResponse.credential);
         console.log(decoded);
-        alert('Login success!'); // Hiển thị thông báo đăng nhập thành công
+        alert('Login success!');
 
         // Lưu token vào localStorage
         localStorage.setItem('authToken', credentialResponse.credential);
 
         setTimeout(() => {
-            window.location.href = "/env-data-table"; // Điều hướng tới trang khác
+            window.location.href = "/env-data-table";
         }, 1000);
     };
 

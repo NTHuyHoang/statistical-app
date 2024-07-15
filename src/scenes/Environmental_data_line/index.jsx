@@ -48,7 +48,6 @@ const Environmental_Data_Line = ({isCustomLineColors = false, isDashboard = fals
 
     return (
         <Box m="20px">
-            {/*<Header title="Line Charts" subtitle="Data Line Charts"/>*/}
             <Box height="75vh">
                 <Grid container spacing={3} sx={{ height: '100%' }}>
                     <Grid item xs={12} md={6} sx={{ height: '50%' }}>

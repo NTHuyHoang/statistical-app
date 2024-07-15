@@ -13,14 +13,12 @@ const Device1_Data_Table = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        // Hàm để lấy dữ liệu từ API
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:4000/api/soildata1');
 
                 const result = response.data.data;
 
-                // Kiểm tra nếu result là một mảng
                 if (Array.isArray(result)) {
                     const formattedData = result.map((item, i) => ({
                         id: i + 1, // Sử dụng _id làm id
@@ -36,8 +34,6 @@ const Device1_Data_Table = () => {
                         Time_real_Date: item.Time_real_Date,
                         Time_mqtt_Date: item.Time_mqtt_Date,
                     }));
-
-                    console.log("Formatted Data:", formattedData); // Thêm dòng này để kiểm tra dữ liệu sau khi định dạng
 
                     setData(formattedData);
                 } else {
