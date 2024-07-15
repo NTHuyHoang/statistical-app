@@ -5,8 +5,25 @@ import { FaGoogle,FaFacebook,FaGithub   } from "react-icons/fa";
 import {GoogleLogin} from '@react-oauth/google';
 import {jwtDecode} from "jwt-decode";
 const Login = () => {
+    const handleSuccess = (credentialResponse) => {
+        const decoded = jwtDecode(credentialResponse.credential);
+        console.log(decoded);
+        alert('Login success!'); // Hiển thị thông báo đăng nhập thành công
+
+        // Lưu token vào localStorage
+        localStorage.setItem('authToken', credentialResponse.credential);
+
+        setTimeout(() => {
+            window.location.href = "/env-data-table"; // Điều hướng tới trang khác
+        }, 1000);
+    };
+
+    const handleFailure = () => {
+        console.log('Login Failed');
+    };
+
     return (
-        <div class="wrapper">
+        <div className="wrapper">
             <form>
                 <h2>Login</h2>
                 <div className="input-field">
@@ -16,7 +33,7 @@ const Login = () => {
                     <input type="password" placeholder='Password' required/>
                 </div>
                 <div className="forget">
-                    <label for="remember">
+                    <label htmlFor="remember">
                         <input type="checkbox" id="remember"/>
                         <p>Remember me</p>
                     </label>
@@ -28,30 +45,21 @@ const Login = () => {
                 </div>
                 <div className="register">
                     Log in via
-                    <p class="login-via">
+                    <p className="login-via">
                         <GoogleLogin
                             render={renderProps => (
                                 <button onClick={renderProps.onClick} disabled={renderProps.disabled} style={{ border: 'none', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center'  }}>
                                     <FaGoogle color="#db4a39" />
                                 </button>
                             )}
-                            onSuccess={credentialResponse => {
-                                const decoded = jwtDecode(credentialResponse?.credential);
-                                alert('Login success!'); // Hiển thị thông báo đăng nhập thành công
-                                setTimeout(() => {
-                                    window.location.href = "https://statistical-data.vercel.app/env-data-table"; // Điều hướng tới trang khác
-                                }, 1000);
-                            }}
-                            onError={() => {
-                                console.log('Login Failed');
-                            }}
+                            onSuccess={handleSuccess}
+                            onError={handleFailure}
                         />
                     </p>
                 </div>
             </form>
-
         </div>
-    )
-
+    );
 }
-export default Login
+
+export default Login;
