@@ -45,6 +45,7 @@ function App() {
                         {!isNotFound && <Topbar setIsSidebar={setIsSidebar}/>}
                         <Routes>
                             <Route path="/" element={<Login/>}/>
+                            <Route path="/login" element={<Login/>}/>
                             <Route path="/env-data-table"
                                    element={<PrivateRoute element={<Environmental_Data_Table/>}/>}/>
                             <Route path="/device1-data-table"
